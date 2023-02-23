@@ -1,0 +1,17 @@
+{{!-- Elemento a mostrar en el body, puede ser cambiante, componente home o carrito, etc --}}
+<h1>Hola {{usuario.nombre}}</h1>
+{{!-- > Busca en la carpeta partials e importa el elemento contador --}}
+{{> contador}}
+{{> ejemploCarpeta/archivo}}
+
+{{#if isTutor}}
+  {{#each cursos}}
+    <div>
+      <p>{{this.numero}}</p>
+      <p>{{this.dia}}</p>
+      <p>{{this.horario}}</p>
+    </div>
+  {{/each}}
+{{else }}
+  <p>No sos tutor</p>
+{{/if}}
